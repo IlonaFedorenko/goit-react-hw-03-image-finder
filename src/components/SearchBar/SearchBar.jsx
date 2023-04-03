@@ -19,7 +19,7 @@ export class Searchbar extends Component {
       alert('Please enter your query');
       return;
     }
-    this.props.changeQuery(query);
+    this.props.changeQuery(this.state.query);
   };
 
   render() {
@@ -47,7 +47,5 @@ export class Searchbar extends Component {
 }
 
 Searchbar.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired,
-  query: PropTypes.string.isRequired,
+  changeQuery: PropTypes.func.isRequired,
 };

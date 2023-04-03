@@ -96,11 +96,7 @@ export class App extends Component {
           paddingBottom: 24,
         }}
       >
-        <Searchbar
-          onSubmit={this.handleSubmit}
-          onChange={this.handleChange}
-          query={this.state.query}
-        />
+        <Searchbar changeQuery={this.changeQuery} />
         <Section>
           {isLoading && <Loader />}
           <ImageGallery images={images} onImageClick={this.onImageClick} />
